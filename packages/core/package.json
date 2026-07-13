@@ -1,0 +1,41 @@
+{
+  "name": "@fiber-preflight/core",
+  "version": "0.1.0",
+  "description": "Route confidence scoring and payment failure diagnostics for Fiber Network (Nervos CKB). Pure TypeScript, zero UI dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "keywords": [
+    "fiber-network",
+    "nervos",
+    "ckb",
+    "payment-channels",
+    "lightning",
+    "routing",
+    "diagnostics"
+  ]
+}

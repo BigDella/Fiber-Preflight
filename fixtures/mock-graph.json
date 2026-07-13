@@ -1,0 +1,1189 @@
+{
+  "nodes": [
+    {
+      "node_id": "0x0200ababababababababababababababababababababababababababababababab",
+      "node_name": "preflight-demo-node",
+      "addresses": [
+        "/ip4/10.0.0.1/tcp/8228/p2p/mock0"
+      ],
+      "timestamp": "0x197fd381300",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0201ababababababababababababababababababababababababababababababab",
+      "node_name": "hub-alpha",
+      "addresses": [
+        "/ip4/10.0.0.2/tcp/8228/p2p/mock1"
+      ],
+      "timestamp": "0x197fd3728a0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0202ababababababababababababababababababababababababababababababab",
+      "node_name": "hub-beta",
+      "addresses": [
+        "/ip4/10.0.0.3/tcp/8228/p2p/mock2"
+      ],
+      "timestamp": "0x197fd363e40",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0203ababababababababababababababababababababababababababababababab",
+      "node_name": "merchant-cafe",
+      "addresses": [
+        "/ip4/10.0.0.4/tcp/8228/p2p/mock3"
+      ],
+      "timestamp": "0x197fd3553e0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0204ababababababababababababababababababababababababababababababab",
+      "node_name": "merchant-books",
+      "addresses": [
+        "/ip4/10.0.0.5/tcp/8228/p2p/mock4"
+      ],
+      "timestamp": "0x197fd346980",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0205ababababababababababababababababababababababababababababababab",
+      "node_name": "exchange-gate",
+      "addresses": [
+        "/ip4/10.0.0.6/tcp/8228/p2p/mock5"
+      ],
+      "timestamp": "0x197fd337f20",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0206ababababababababababababababababababababababababababababababab",
+      "node_name": "relay-one",
+      "addresses": [
+        "/ip4/10.0.0.7/tcp/8228/p2p/mock6"
+      ],
+      "timestamp": "0x197fd3294c0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0207ababababababababababababababababababababababababababababababab",
+      "node_name": "relay-two",
+      "addresses": [
+        "/ip4/10.0.0.8/tcp/8228/p2p/mock7"
+      ],
+      "timestamp": "0x197fd31aa60",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0208ababababababababababababababababababababababababababababababab",
+      "node_name": "chokepoint-bridge",
+      "addresses": [
+        "/ip4/10.0.0.9/tcp/8228/p2p/mock8"
+      ],
+      "timestamp": "0x197fd30c000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0209ababababababababababababababababababababababababababababababab",
+      "node_name": "remote-village",
+      "addresses": [
+        "/ip4/10.0.0.10/tcp/8228/p2p/mock9"
+      ],
+      "timestamp": "0x197fd2fd5a0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x020aababababababababababababababababababababababababababababababab",
+      "node_name": "island-node",
+      "addresses": [
+        "/ip4/10.0.0.11/tcp/8228/p2p/mock10"
+      ],
+      "timestamp": "0x197fd2eeb40",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x020bababababababababababababababababababababababababababababababab",
+      "node_name": "rusd-hub",
+      "addresses": [
+        "/ip4/10.0.0.12/tcp/8228/p2p/mock11"
+      ],
+      "timestamp": "0x197fd2e00e0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x020cababababababababababababababababababababababababababababababab",
+      "node_name": "rusd-merchant",
+      "addresses": [
+        "/ip4/10.0.0.13/tcp/8228/p2p/mock12"
+      ],
+      "timestamp": "0x197fd2d1680",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x020dababababababababababababababababababababababababababababababab",
+      "node_name": "rusd-user",
+      "addresses": [
+        "/ip4/10.0.0.14/tcp/8228/p2p/mock13"
+      ],
+      "timestamp": "0x197fd2c2c20",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x020eababababababababababababababababababababababababababababababab",
+      "node_name": "sleepy-peer",
+      "addresses": [
+        "/ip4/10.0.0.15/tcp/8228/p2p/mock14"
+      ],
+      "timestamp": "0x197fd2b41c0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x020fababababababababababababababababababababababababababababababab",
+      "node_name": "peer-15",
+      "addresses": [
+        "/ip4/10.0.0.16/tcp/8228/p2p/mock15"
+      ],
+      "timestamp": "0x197fd2a5760",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0210ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-16",
+      "addresses": [
+        "/ip4/10.0.0.17/tcp/8228/p2p/mock16"
+      ],
+      "timestamp": "0x197fd296d00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0211ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-17",
+      "addresses": [
+        "/ip4/10.0.0.18/tcp/8228/p2p/mock17"
+      ],
+      "timestamp": "0x197fd2882a0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0212ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-18",
+      "addresses": [
+        "/ip4/10.0.0.19/tcp/8228/p2p/mock18"
+      ],
+      "timestamp": "0x197fd279840",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0213ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-19",
+      "addresses": [
+        "/ip4/10.0.0.20/tcp/8228/p2p/mock19"
+      ],
+      "timestamp": "0x197fd26ade0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0214ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-20",
+      "addresses": [
+        "/ip4/10.0.0.21/tcp/8228/p2p/mock20"
+      ],
+      "timestamp": "0x197fd25c380",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0215ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-21",
+      "addresses": [
+        "/ip4/10.0.0.22/tcp/8228/p2p/mock21"
+      ],
+      "timestamp": "0x197fd24d920",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0216ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-22",
+      "addresses": [
+        "/ip4/10.0.0.23/tcp/8228/p2p/mock22"
+      ],
+      "timestamp": "0x197fd23eec0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0217ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-23",
+      "addresses": [
+        "/ip4/10.0.0.24/tcp/8228/p2p/mock23"
+      ],
+      "timestamp": "0x197fd230460",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0218ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-24",
+      "addresses": [
+        "/ip4/10.0.0.25/tcp/8228/p2p/mock24"
+      ],
+      "timestamp": "0x197fd221a00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x0219ababababababababababababababababababababababababababababababab",
+      "node_name": "peer-25",
+      "addresses": [
+        "/ip4/10.0.0.26/tcp/8228/p2p/mock25"
+      ],
+      "timestamp": "0x197fd212fa0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x021aababababababababababababababababababababababababababababababab",
+      "node_name": "peer-26",
+      "addresses": [
+        "/ip4/10.0.0.27/tcp/8228/p2p/mock26"
+      ],
+      "timestamp": "0x197fd204540",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x021bababababababababababababababababababababababababababababababab",
+      "node_name": "peer-27",
+      "addresses": [
+        "/ip4/10.0.0.28/tcp/8228/p2p/mock27"
+      ],
+      "timestamp": "0x197fd1f5ae0",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x021cababababababababababababababababababababababababababababababab",
+      "node_name": "peer-28",
+      "addresses": [
+        "/ip4/10.0.0.29/tcp/8228/p2p/mock28"
+      ],
+      "timestamp": "0x197fd1e7080",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    },
+    {
+      "node_id": "0x021dababababababababababababababababababababababababababababababab",
+      "node_name": "peer-29",
+      "addresses": [
+        "/ip4/10.0.0.30/tcp/8228/p2p/mock29"
+      ],
+      "timestamp": "0x197fd1d8620",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606"
+    }
+  ],
+  "channels": [
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000101000000",
+      "node1": "0x0200ababababababababababababababababababababababababababababababab",
+      "node2": "0x0201ababababababababababababababababababababababababababababababab",
+      "capacity": "0xe8d4a51000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000201000000",
+      "node1": "0x0200ababababababababababababababababababababababababababababababab",
+      "node2": "0x0202ababababababababababababababababababababababababababababababab",
+      "capacity": "0xba43b74000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x4b0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000301000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0202ababababababababababababababababababababababababababababababab",
+      "capacity": "0x1d1a94a2000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000401000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0203ababababababababababababababababababababababababababababababab",
+      "capacity": "0x15d3ef79800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000501000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0204ababababababababababababababababababababababababababababababab",
+      "capacity": "0x1176592e000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000601000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0205ababababababababababababababababababababababababababababababab",
+      "capacity": "0x2ba7def3000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x320",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x320",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000701000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0206ababababababababababababababababababababababababababababababab",
+      "capacity": "0xd18c2e2800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x7d0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000801000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0207ababababababababababababababababababababababababababababababab",
+      "capacity": "0xd18c2e2800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x7d0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000901000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0203ababababababababababababababababababababababababababababababab",
+      "capacity": "0xe8d4a51000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x4b0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000a01000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0205ababababababababababababababababababababababababababababababab",
+      "capacity": "0x246139ca800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x384",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x320",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000b01000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0207ababababababababababababababababababababababababababababababab",
+      "capacity": "0xba43b74000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x4b0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x7d0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000c01000000",
+      "node1": "0x0204ababababababababababababababababababababababababababababababab",
+      "node2": "0x0205ababababababababababababababababababababababababababababababab",
+      "capacity": "0x8bb2c97000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x320",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000d01000000",
+      "node1": "0x0206ababababababababababababababababababababababababababababababab",
+      "node2": "0x0208ababababababababababababababababababababababababababababababab",
+      "capacity": "0xa2fb405800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x7d0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1388",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000e01000000",
+      "node1": "0x0207ababababababababababababababababababababababababababababababab",
+      "node2": "0x0208ababababababababababababababababababababababababababababababab",
+      "capacity": "0x8bb2c97000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x7d0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1388",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000000f01000000",
+      "node1": "0x0208ababababababababababababababababababababababababababababababab",
+      "node2": "0x0209ababababababababababababababababababababababababababababababab",
+      "capacity": "0x2cb417800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1388",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x3e8"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x3e8"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001001000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x020eababababababababababababababababababababababababababababababab",
+      "capacity": "0x746a528800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": false,
+        "fee_rate": "0x0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001101000000",
+      "node1": "0x0200ababababababababababababababababababababababababababababababab",
+      "node2": "0x020bababababababababababababababababababababababababababababababab",
+      "capacity": "0x746a528800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": {
+        "code_hash": "0x1142755a044bf2ee358cba9f2da187ce928c91cd4dc8692ded0337efa677d21a",
+        "hash_type": "type",
+        "args": "0x878fcc6f1f08d48e87bb1c3b3d5083f23f8a39c5d5c764f253b55b998526439b"
+      },
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x0",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001201000000",
+      "node1": "0x020bababababababababababababababababababababababababababababababab",
+      "node2": "0x020cababababababababababababababababababababababababababababababab",
+      "capacity": "0x5d21dba000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": {
+        "code_hash": "0x1142755a044bf2ee358cba9f2da187ce928c91cd4dc8692ded0337efa677d21a",
+        "hash_type": "type",
+        "args": "0x878fcc6f1f08d48e87bb1c3b3d5083f23f8a39c5d5c764f253b55b998526439b"
+      },
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001301000000",
+      "node1": "0x020bababababababababababababababababababababababababababababababab",
+      "node2": "0x020dababababababababababababababababababababababababababababababab",
+      "capacity": "0x45d964b800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": {
+        "code_hash": "0x1142755a044bf2ee358cba9f2da187ce928c91cd4dc8692ded0337efa677d21a",
+        "hash_type": "type",
+        "args": "0x878fcc6f1f08d48e87bb1c3b3d5083f23f8a39c5d5c764f253b55b998526439b"
+      },
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001401000000",
+      "node1": "0x020cababababababababababababababababababababababababababababababab",
+      "node2": "0x020dababababababababababababababababababababababababababababababab",
+      "capacity": "0x5d21dba00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": {
+        "code_hash": "0x1142755a044bf2ee358cba9f2da187ce928c91cd4dc8692ded0337efa677d21a",
+        "hash_type": "type",
+        "args": "0x878fcc6f1f08d48e87bb1c3b3d5083f23f8a39c5d5c764f253b55b998526439b"
+      },
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x1f4",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001501000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x020fababababababababababababababababababababababababababababababab",
+      "capacity": "0x2e90edd000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001601000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0210ababababababababababababababababababababababababababababababab",
+      "capacity": "0x320effa600",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001701000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0211ababababababababababababababababababababababababababababababab",
+      "capacity": "0x358d117c00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001801000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0212ababababababababababababababababababababababababababababababab",
+      "capacity": "0x390b235200",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001901000000",
+      "node1": "0x0211ababababababababababababababababababababababababababababababab",
+      "node2": "0x0212ababababababababababababababababababababababababababababababab",
+      "capacity": "0x12a05f2000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001a01000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0213ababababababababababababababababababababababababababababababab",
+      "capacity": "0x3c89352800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001b01000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0214ababababababababababababababababababababababababababababababab",
+      "capacity": "0x400746fe00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001c01000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0215ababababababababababababababababababababababababababababababab",
+      "capacity": "0x438558d400",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001d01000000",
+      "node1": "0x0214ababababababababababababababababababababababababababababababab",
+      "node2": "0x0215ababababababababababababababababababababababababababababababab",
+      "capacity": "0x12a05f2000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001e01000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0216ababababababababababababababababababababababababababababababab",
+      "capacity": "0x47036aaa00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000001f01000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0217ababababababababababababababababababababababababababababababab",
+      "capacity": "0x4a817c8000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002001000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x0218ababababababababababababababababababababababababababababababab",
+      "capacity": "0x4dff8e5600",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002101000000",
+      "node1": "0x0217ababababababababababababababababababababababababababababababab",
+      "node2": "0x0218ababababababababababababababababababababababababababababababab",
+      "capacity": "0x12a05f2000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002201000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x0219ababababababababababababababababababababababababababababababab",
+      "capacity": "0x517da02c00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002301000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x021aababababababababababababababababababababababababababababababab",
+      "capacity": "0x54fbb20200",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002401000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x021bababababababababababababababababababababababababababababababab",
+      "capacity": "0x5879c3d800",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002501000000",
+      "node1": "0x021aababababababababababababababababababababababababababababababab",
+      "node2": "0x021bababababababababababababababababababababababababababababababab",
+      "capacity": "0x12a05f2000",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002601000000",
+      "node1": "0x0201ababababababababababababababababababababababababababababababab",
+      "node2": "0x021cababababababababababababababababababababababababababababababab",
+      "capacity": "0x5bf7d5ae00",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    },
+    {
+      "channel_outpoint": "0x000000000000000000000000000000000000000000000000000000000000002701000000",
+      "node1": "0x0202ababababababababababababababababababababababababababababababab",
+      "node2": "0x021dababababababababababababababababababababababababababababababab",
+      "capacity": "0x5f75e78400",
+      "chain_hash": "0x10639e0895502b5688a6be8cf69460d76541bfa4821629d86d62ba0aae3f9606",
+      "udt_type_script": null,
+      "created_timestamp": "0x197f811b700",
+      "update_info_of_node1": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x3e8",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      },
+      "update_info_of_node2": {
+        "timestamp": "0x197fd363e40",
+        "enabled": true,
+        "fee_rate": "0x5dc",
+        "tlc_expiry_delta": "0x54600",
+        "tlc_minimum_value": "0x0"
+      }
+    }
+  ]
+}

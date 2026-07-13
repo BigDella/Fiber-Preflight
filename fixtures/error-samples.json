@@ -1,0 +1,50 @@
+[
+  {
+    "label": "No route found",
+    "raw": "Failed to send payment: no route found to destination node 0x03f1a2"
+  },
+  {
+    "label": "Insufficient balance",
+    "raw": "SendPaymentError: insufficient local balance to cover amount plus fees"
+  },
+  {
+    "label": "Target unreachable",
+    "raw": "PaymentSessionError: target node unreachable, node has no channels in graph"
+  },
+  {
+    "label": "Capacity exceeded",
+    "raw": "TlcErr: amount exceeds channel capacity on outbound channel"
+  },
+  {
+    "label": "Invoice expired",
+    "raw": "InvoiceError: invoice expired at 1720000000"
+  },
+  {
+    "label": "Invoice already paid",
+    "raw": "InvoiceError: invoice already paid, duplicated payment rejected"
+  },
+  {
+    "label": "Invalid invoice",
+    "raw": "failed to parse invoice: malformed bech32 string"
+  },
+  {
+    "label": "Asset mismatch",
+    "raw": "ChannelError: UDT type script mismatch between payment and channel"
+  },
+  {
+    "label": "TLC timeout",
+    "raw": "TlcErr: TLC timed out waiting for preimage reveal"
+  },
+  {
+    "label": "Peer disconnected",
+    "raw": "PeerError: peer not connected, connection reset by remote"
+  },
+  {
+    "label": "Fee limit exceeded",
+    "raw": "SendPaymentError: route fee 5200 shannons exceeds max fee limit 1000"
+  },
+  {
+    "label": "RPC unreachable",
+    "raw": "fetch failed: connect ECONNREFUSED 127.0.0.1:8227"
+  }
+]

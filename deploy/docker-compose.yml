@@ -1,0 +1,53 @@
+# Fiber Preflight — single-droplet deployment.
+#
+#   fiber-node : Fiber testnet node (RPC NOT exposed publicly — internal network only)
+#   web        : Next.js app (talks to fiber-node over the docker network)
+#   nginx      : reverse proxy on :80
+#
+# First run: see setup.sh. The fiber node needs a funded testnet account and at
+# least one open channel before live payments work; until then the app still
+# serves graph data, preflight and diagnostics.
+services:
+  fiber-node:
+    image: ghcr.io/nervosnetwork/fiber:latest
+    restart: unless-stopped
+    volumes:
+      - ./fiber-data:/fiber/data
+      - ./fiber-config:/fiber/config
+    environment:
+      - RUST_LOG=info
+      # Never commit a real secret; set in deploy/.env on the droplet
+      - FIBER_SECRET_KEY_PASSWORD=${FIBER_SECRET_KEY_PASSWORD:?set in deploy/.env}
+    command: ["fnn", "-c", "/fiber/config/config.yml", "-d", "/fiber/data"]
+    expose:
+      - "8227"   # RPC — internal only, deliberately not in `ports:`
+    ports:
+      - "8228:8228" # p2p port must be reachable for peers/gossip
+    networks: [fiber]
+
+  web:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.web
+    restart: unless-stopped
+    environment:
+      - FIBER_RPC_URL=http://fiber-node:8227
+      - FIBER_MOCK=${FIBER_MOCK:-false}
+    depends_on: [fiber-node]
+    expose:
+      - "3000"
+    networks: [fiber]
+
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on: [web]
+    networks: [fiber]
+
+networks:
+  fiber:
+    driver: bridge

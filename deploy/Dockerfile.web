@@ -1,0 +1,23 @@
+# Multi-stage build for the Fiber Preflight web app (Next.js standalone output).
+# Build context is the repo root: docker build -f deploy/Dockerfile.web .
+FROM node:22-alpine AS builder
+RUN corepack enable
+WORKDIR /repo
+COPY pnpm-workspace.yaml package.json pnpm-lock.yaml tsconfig.base.json ./
+COPY packages/core/package.json packages/core/
+COPY apps/web/package.json apps/web/
+RUN pnpm install --frozen-lockfile
+COPY packages/core packages/core
+COPY apps/web apps/web
+ENV NEXT_OUTPUT=standalone
+RUN pnpm --filter @fiber-preflight/core build && pnpm --filter @fiber-preflight/web build
+
+FROM node:22-alpine AS runner
+ENV NODE_ENV=production
+WORKDIR /app
+# Next standalone bundles node_modules it needs
+COPY --from=builder /repo/apps/web/.next/standalone ./
+COPY --from=builder /repo/apps/web/.next/static ./apps/web/.next/static
+EXPOSE 3000
+ENV PORT=3000 HOSTNAME=0.0.0.0
+CMD ["node", "apps/web/server.js"]
