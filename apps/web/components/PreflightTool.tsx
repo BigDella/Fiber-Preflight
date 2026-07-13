@@ -64,6 +64,7 @@ const fmtUnits = (base: string, label: string) => {
 
 export function PreflightTool() {
   const [target, setTarget] = useState("");
+  const [source, setSource] = useState("");
   const [amount, setAmount] = useState("100");
   const [asset, setAsset] = useState("CKB");
   const [assets, setAssets] = useState<AssetDto[]>([{ assetId: "CKB", label: "CKB" }]);
@@ -110,7 +111,13 @@ export function PreflightTool() {
       const res = await fetch(`/api/${mode}`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ target, amount, asset: asset === "CKB" ? undefined : asset }),
+        body: JSON.stringify({
+          target,
+          amount,
+          asset: asset === "CKB" ? undefined : asset,
+          // source override only applies to analysis; payments always originate from this node
+          ...(mode === "preflight" && source.trim() ? { source: source.trim() } : {}),
+        }),
       });
       const data = await res.json();
       if (!data.ok && data.error) {
@@ -208,6 +215,19 @@ export function PreflightTool() {
               ))}
             </select>
           </div>
+        </div>
+
+        <div className="mt-4">
+          <label className="text-xs uppercase tracking-wide" style={{ color: "var(--ink-3)" }}>
+            Source node — optional, defaults to this node (analyse "can node A pay node B?")
+          </label>
+          <input
+            className="mono mt-1 w-full rounded-lg border p-2.5 text-sm"
+            style={{ background: "var(--surface-2)", color: "var(--ink)" }}
+            placeholder="leave empty to preflight from this node"
+            value={source}
+            onChange={(e) => setSource(e.target.value)}
+          />
         </div>
 
         <div className="mt-4 flex flex-wrap gap-3">
