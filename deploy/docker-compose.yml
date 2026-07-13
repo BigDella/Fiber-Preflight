@@ -9,7 +9,7 @@
 # `docker save`-d and `docker load`-ed — the service uses the image tag either way.
 services:
   fiber-node:
-    image: ${FIBER_IMAGE:-ghcr.io/nervosnetwork/fiber:v0.9.0-rc7}
+    image: ${FIBER_IMAGE:-nervos/fiber:0.9.0-rc7}
     restart: unless-stopped
     volumes:
       # image entrypoint copies its bundled testnet config to /fiber/config.yml
@@ -34,6 +34,8 @@ services:
     environment:
       - FIBER_RPC_URL=http://fiber-node:8227
       - FIBER_MOCK=${FIBER_MOCK:-false}
+      # label the testnet RUSD stablecoin (same script the node's udt_whitelist ships)
+      - FIBER_ASSET_LABELS=udt:0x1142755a044bf2ee358cba9f2da187ce928c91cd4dc8692ded0337efa677d21a:type:0x878fcc6f1f08d48e87bb1c3b3d5083f23f8a39c5d5c764f253b55b998526439b=RUSD
     depends_on: [fiber-node]
     expose:
       - "3000"

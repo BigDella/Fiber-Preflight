@@ -43,7 +43,7 @@ if [ ! -f fiber-node/ckb/key ]; then
 fi
 
 source .env
-FIBER_IMAGE="${FIBER_IMAGE:-ghcr.io/nervosnetwork/fiber:v0.9.0-rc7}"
+FIBER_IMAGE="${FIBER_IMAGE:-nervos/fiber:0.9.0-rc7}"
 if [ ! -f fiber-node/config.yml ]; then
   echo "==> Materialising bundled testnet config from the image"
   docker run --rm -v "$(pwd)/fiber-node:/fiber" --entrypoint sh "$FIBER_IMAGE" \
