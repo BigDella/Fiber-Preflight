@@ -5,6 +5,7 @@ import type {
   RawGraphNodesResult,
   RawListChannelsResult,
   RawNodeInfo,
+  RawParseInvoiceResult,
   RawParsedInvoice,
   RawPayment,
 } from "./types.js";
@@ -93,8 +94,19 @@ export class FiberRpcClient implements FiberClient {
     ]);
   }
 
-  parseInvoice(invoice: string): Promise<RawParsedInvoice> {
-    return this.call<RawParsedInvoice>("parse_invoice", [{ invoice }]);
+  async parseInvoice(invoice: string): Promise<RawParsedInvoice> {
+    const result = await this.call<RawParsedInvoice | RawParseInvoiceResult>("parse_invoice", [{ invoice }]);
+    if (
+      result &&
+      typeof result === "object" &&
+      "invoice" in result &&
+      result.invoice &&
+      typeof result.invoice === "object"
+    ) {
+      return result.invoice as RawParsedInvoice;
+    }
+    // Older/mock-compatible RPC implementations returned the invoice directly.
+    return result as RawParsedInvoice;
   }
 
   sendPayment(params: Record<string, unknown>): Promise<RawPayment> {

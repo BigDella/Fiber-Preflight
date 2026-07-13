@@ -3,6 +3,7 @@ import {
   FiberRpcClient,
   MockFiberClient,
   MOCK_ASSET_LABELS,
+  nodeIdOf,
   type FiberClient,
   type NetworkGraph,
   type RawNodeInfo,
@@ -94,7 +95,7 @@ export async function getSelfNodeId(): Promise<string> {
   if (s.selfNodeId) return s.selfNodeId;
   const info = await s.client.nodeInfo();
   s.nodeInfo = info;
-  s.selfNodeId = info.node_id ?? "";
+  s.selfNodeId = nodeIdOf(info) ?? "";
   return s.selfNodeId;
 }
 
@@ -102,7 +103,7 @@ export async function getNodeInfo(): Promise<RawNodeInfo> {
   const s = state();
   const info = await s.client.nodeInfo();
   s.nodeInfo = info;
-  s.selfNodeId = info.node_id ?? s.selfNodeId;
+  s.selfNodeId = nodeIdOf(info) ?? s.selfNodeId;
   return info;
 }
 

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { explainFailure } from "@fiber-preflight/core";
+import { explainFailure, nodeIdOf } from "@fiber-preflight/core";
 import { getNodeInfo, IS_MOCK, jsonSafe } from "@/lib/fiber";
 
 export const dynamic = "force-dynamic";
@@ -12,7 +12,7 @@ export async function GET() {
       ok: true,
       mock: IS_MOCK,
       node: jsonSafe({
-        nodeId: info.node_id,
+        nodeId: nodeIdOf(info),
         nodeName: info.node_name,
         addresses: info.addresses,
         peersCount: info.peers_count,

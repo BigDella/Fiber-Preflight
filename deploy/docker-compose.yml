@@ -1,12 +1,10 @@
 # Fiber Preflight — single-droplet deployment.
 #
 #   fiber-node : official Fiber testnet node (RPC NOT exposed publicly — internal network only)
-#   web        : Next.js app (talks to fiber-node over the docker network)
+#   web        : Next.js app (shares fiber-node's namespace to reach loopback RPC)
 #   nginx      : reverse proxy on :80
 #
-# First run: bash setup.sh (creates swap, docker, the node key, and the config).
-# The web image can be built here (docker compose build) or prebuilt elsewhere,
-# `docker save`-d and `docker load`-ed — the service uses the image tag either way.
+# First run from the complete repository: sudo bash deploy/setup.sh.
 services:
   fiber-node:
     image: ${FIBER_IMAGE:-nervos/fiber:0.9.0-rc7}
@@ -19,8 +17,6 @@ services:
       - RUST_LOG=${RUST_LOG:-info}
       # Never commit a real secret; set in deploy/.env on the droplet
       - FIBER_SECRET_KEY_PASSWORD=${FIBER_SECRET_KEY_PASSWORD:?set in deploy/.env}
-    expose:
-      - "8227"   # RPC — internal only, deliberately not in `ports:`
     ports:
       - "8228:8228" # p2p port must be reachable for peers/gossip
     networks: [fiber]
@@ -31,15 +27,26 @@ services:
       context: ..
       dockerfile: deploy/Dockerfile.web
     restart: unless-stopped
+    # Share the fiber node's network namespace: the node's RPC stays bound to
+    # 127.0.0.1 (fnn refuses public binds without auth), and only this web
+    # process can reach it. nginx reaches the web app via the fiber-node alias.
+    network_mode: "service:fiber-node"
     environment:
-      - FIBER_RPC_URL=http://fiber-node:8227
+      - FIBER_RPC_URL=http://127.0.0.1:8227
       - FIBER_MOCK=${FIBER_MOCK:-false}
       # label the testnet RUSD stablecoin (same script the node's udt_whitelist ships)
       - FIBER_ASSET_LABELS=udt:0x1142755a044bf2ee358cba9f2da187ce928c91cd4dc8692ded0337efa677d21a:type:0x878fcc6f1f08d48e87bb1c3b3d5083f23f8a39c5d5c764f253b55b998526439b=RUSD
     depends_on: [fiber-node]
-    expose:
-      - "3000"
-    networks: [fiber]
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "require('http').get('http://127.0.0.1:3000/', r => process.exit(r.statusCode < 500 ? 0 : 1)).on('error', () => process.exit(1))"
+      interval: 10s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
 
   nginx:
     image: nginx:alpine
@@ -48,7 +55,9 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-    depends_on: [web]
+    depends_on:
+      web:
+        condition: service_healthy
     networks: [fiber]
 
 networks:

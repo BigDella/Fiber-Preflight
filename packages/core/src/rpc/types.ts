@@ -17,6 +17,8 @@ export interface RawScript {
 /** Node announcement from `graph_nodes`. */
 export interface RawGraphNode {
   node_id?: string;
+  /** Current Fiber RPC field name (v0.9.x). */
+  pubkey?: string;
   node_name?: string;
   addresses?: string[];
   timestamp?: string | number;
@@ -73,7 +75,10 @@ export interface RawGraphChannelsResult {
 }
 
 export interface RawNodeInfo {
+  /** Current Fiber RPC field name (v0.9.x). */
+  pubkey?: string;
   node_name?: string;
+  /** Legacy/local alias retained for backwards compatibility. */
   node_id?: string;
   addresses?: string[];
   chain_hash?: string;
@@ -82,6 +87,15 @@ export interface RawNodeInfo {
   pending_channel_count?: string | number;
   network_sync_status?: string;
   [k: string]: unknown;
+}
+
+/** Resolve a Fiber node identity across current and legacy RPC field names. */
+export function nodeIdOf(node: {
+  pubkey?: string;
+  node_id?: string;
+  public_key?: string;
+}): string | undefined {
+  return node.pubkey ?? node.node_id ?? node.public_key;
 }
 
 export interface RawParsedInvoice {
@@ -94,6 +108,12 @@ export interface RawParsedInvoice {
     attrs?: unknown[];
     [k: string]: unknown;
   };
+  [k: string]: unknown;
+}
+
+/** `parse_invoice` wraps the decoded invoice in current Fiber releases. */
+export interface RawParseInvoiceResult {
+  invoice: RawParsedInvoice;
   [k: string]: unknown;
 }
 

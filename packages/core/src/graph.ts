@@ -1,10 +1,11 @@
 import { hexToBigInt } from "./hex.js";
-import type {
-  FiberClient,
-  RawGraphChannel,
-  RawGraphNode,
-  RawChannelUpdateInfo,
-  RawScript,
+import {
+  nodeIdOf,
+  type FiberClient,
+  type RawGraphChannel,
+  type RawGraphNode,
+  type RawChannelUpdateInfo,
+  type RawScript,
 } from "./rpc/types.js";
 import { CKB_ASSET, type AssetId, type ChannelEdge, type GraphNode, type NetworkGraph } from "./types.js";
 
@@ -75,7 +76,7 @@ function edgesFromChannel(
 }
 
 function normaliseNode(raw: RawGraphNode): GraphNode | null {
-  const nodeId = raw.node_id ?? raw.public_key;
+  const nodeId = nodeIdOf(raw);
   if (!nodeId) return null;
   return {
     nodeId,

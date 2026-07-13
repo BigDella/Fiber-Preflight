@@ -106,13 +106,24 @@ The graph is cached server-side and refreshed at most every 60 s; responses carr
 
 ## Deployment (single $4 droplet)
 
+The web image builds from the monorepo root, so deploy the **complete repository** rather than
+copying `deploy/` by itself. On a fresh DigitalOcean Ubuntu droplet (whose default account is `root`):
+
 ```bash
-scp -r deploy user@droplet:~/fiber-preflight-deploy
-ssh user@droplet "cd fiber-preflight-deploy && bash setup.sh"
+ssh root@droplet
+git clone https://github.com/BigDella/Fiber-Preflight.git
+cd Fiber-Preflight
+bash deploy/setup.sh
 ```
 
+To deploy unpushed local changes instead, copy the whole `Fiber-Preflight` directory to the droplet,
+preserving `apps/`, `packages/`, and `deploy/`, then run `sudo bash deploy/setup.sh` from its root.
+The script fails early when the full build context, root privileges, Docker Compose v2, or the Docker
+daemon is unavailable.
+
 `deploy/` contains `docker-compose.yml` (Fiber testnet node + web app + nginx), with the **RPC port
-never exposed publicly** — only the web container reaches it over the internal docker network.
+bound to `127.0.0.1` inside the Fiber node's network namespace and never published publicly. The web
+container shares that namespace to reach the RPC; nginx exposes only the app on port 80.
 See [deploy/setup.sh](deploy/setup.sh); fund the node from the [Pudge faucet](https://faucet.nervos.org)
 and open one channel for live routing data.
 
