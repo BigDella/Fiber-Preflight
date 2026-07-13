@@ -13,12 +13,17 @@ export const dynamic = "force-dynamic";
 
 /**
  * POST /api/preflight
- * body: { target: nodeId | fiber invoice, amount?: decimal string (display units, 8 decimals), asset?: AssetId }
+ * body: {
+ *   target: nodeId | fiber invoice,
+ *   amount?: decimal string (display units, 8 decimals),
+ *   asset?: AssetId,
+ *   source?: nodeId   — defaults to this node; override to ask "can node A pay node B?"
+ * }
  * -> { ok, report: PreflightReport }
  * When `target` is an invoice, amount/asset/target are taken from the invoice.
  */
 export async function POST(req: Request) {
-  let body: { target?: string; amount?: string; asset?: string };
+  let body: { target?: string; amount?: string; asset?: string; source?: string };
   try {
     body = await req.json();
   } catch {
@@ -56,7 +61,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "amount must be positive" }, { status: 400 });
     }
 
-    const [graph, source] = await Promise.all([getGraph(), getSelfNodeId()]);
+    const graph = await getGraph();
+    const source = body.source?.trim() || (await getSelfNodeId());
     const report = preflight(graph, { source, target, amount, asset, assetLabels: ASSET_LABELS });
     return NextResponse.json({ ok: true, mock: IS_MOCK, report: jsonSafe(report) });
   } catch (e) {

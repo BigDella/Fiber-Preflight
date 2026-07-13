@@ -1,24 +1,24 @@
 # Fiber Preflight — single-droplet deployment.
 #
-#   fiber-node : Fiber testnet node (RPC NOT exposed publicly — internal network only)
+#   fiber-node : official Fiber testnet node (RPC NOT exposed publicly — internal network only)
 #   web        : Next.js app (talks to fiber-node over the docker network)
 #   nginx      : reverse proxy on :80
 #
-# First run: see setup.sh. The fiber node needs a funded testnet account and at
-# least one open channel before live payments work; until then the app still
-# serves graph data, preflight and diagnostics.
+# First run: bash setup.sh (creates swap, docker, the node key, and the config).
+# The web image can be built here (docker compose build) or prebuilt elsewhere,
+# `docker save`-d and `docker load`-ed — the service uses the image tag either way.
 services:
   fiber-node:
-    image: ghcr.io/nervosnetwork/fiber:latest
+    image: ${FIBER_IMAGE:-ghcr.io/nervosnetwork/fiber:v0.9.0-rc7}
     restart: unless-stopped
     volumes:
-      - ./fiber-data:/fiber/data
-      - ./fiber-config:/fiber/config
+      # image entrypoint copies its bundled testnet config to /fiber/config.yml
+      # on first start; the CKB private key must exist at ./fiber-node/ckb/key
+      - ./fiber-node:/fiber
     environment:
-      - RUST_LOG=info
+      - RUST_LOG=${RUST_LOG:-info}
       # Never commit a real secret; set in deploy/.env on the droplet
       - FIBER_SECRET_KEY_PASSWORD=${FIBER_SECRET_KEY_PASSWORD:?set in deploy/.env}
-    command: ["fnn", "-c", "/fiber/config/config.yml", "-d", "/fiber/data"]
     expose:
       - "8227"   # RPC — internal only, deliberately not in `ports:`
     ports:
@@ -26,6 +26,7 @@ services:
     networks: [fiber]
 
   web:
+    image: fiber-preflight-web:latest
     build:
       context: ..
       dockerfile: deploy/Dockerfile.web

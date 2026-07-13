@@ -86,7 +86,7 @@ Multi-asset: pass `asset: assetIdOf(udtTypeScript)` to route over a UDT (stablec
 |---|---|---|
 | `/api/health` | GET | node reachability + `node_info` summary |
 | `/api/graph/summary` | GET | node/channel counts, per-asset capacity, snapshot age |
-| `/api/preflight` | POST `{ target, amount?, asset? }` | full `PreflightReport`; `target` may be a node id **or a Fiber invoice** (parsed via `parse_invoice`) |
+| `/api/preflight` | POST `{ target, amount?, asset?, source? }` | full `PreflightReport`; `target` may be a node id **or a Fiber invoice** (parsed via `parse_invoice`); `source` defaults to this node — override to ask "can node A pay node B?" |
 | `/api/explain` | POST `{ error }` | translate a raw error (pure; works without a node). GET returns sample errors |
 | `/api/pay` | POST `{ target, amount?, asset? }` | **demo/testnet only**: preflight → `send_payment` → poll `get_payment` → on failure, raw error **and** translated diagnostic |
 
